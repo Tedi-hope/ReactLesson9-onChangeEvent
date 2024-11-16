@@ -4,18 +4,20 @@ function UserInput(){
   const [input,setInput]=useState('');
  
   const handleInput=(evt)=>{
+     let tempstr=" ";
      setInput(evt.target.value);
-     console.log("Your favorite langauge is"+input);
+     tempstr+=input;
+     console.log(`Your favorite langauge is ${tempstr}`);
   }
 
     return(
         <div>
             <h3>User Form</h3>
             <form action="">
-                <label for="uinput">Enter your favorite Programming Language</label>
+                <label >Enter your favorite Programming Language</label>
                 <input id="uinput" type="text" value={input} onChange={handleInput}/>
             </form>
-            
+            <p>Your Favorite Language:{input}</p>
         </div>
     );
     
